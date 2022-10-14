@@ -1,0 +1,82 @@
+-- Bai 1
+-- CREATE TABLE hoa_don(
+--   id INT PRIMARY KEY AUTO_INCREMENT,
+--   product_name VARCHAR(255),
+--   ten_khach_hang VARCHAR(255),
+--   country VARCHAR(255),
+--   gender VARCHAR(255),
+--   email VARCHAR(255),
+--   price INT
+-- );
+
+-- Bai 2
+
+-- INSERT INTO
+-- hoa_don ( product_name, ten_khach_hang, country, gender, email, price)
+-- VALUES
+-- ( 'Bánh mì ngọt', 'Sinderland', 'US', 'Male', 'gsinderland0@hostgator.com', 1698),
+-- ( 'Sữa chua', 'Millett', 'UK', 'Female', 'cmillett1@oakley.com', 722),
+-- ( 'Sữa chua', 'Wasbrough', 'US', 'Female', 'awasbrough2@icio.us', 1572),
+-- ( 'Bánh mì ngọt', 'Bubbings', 'UK', 'Female', 'gbubbings3@fda.gov', 1602),
+-- ( 'Tiêu bắc', 'Loody', 'UK', 'Female', 'gloody4@wix.com', 1703),
+-- ( 'Tiêu bắc', 'Sealeaf', 'UK', 'Female', 'jsealeaf5@google.es', 937),
+-- ( 'Nấm Nhật Bản', 'Tesdale', 'US', 'Agender', 'jtesdale6@cbc.ca', 704),
+-- ( 'Nấm Nhật Bản', 'Maestro', 'US', 'Female', 'kmaestro7@soup.io', 1141),
+-- ( 'Nấm Nhật Bản', 'Sugg', 'VN', 'Male', 'rsugg8@vistaprint.com', 1612),
+-- ( 'Nấm Nhật Bản', 'Matteucci', 'INDIA', 'Male', 'ematteucci9@dell.com', 1577),
+-- ( 'Nấm Nhật Bản', 'Taillant', 'VN', 'Male', 'ttaillanta@ocn.ne.jp', 1109),
+-- ( 'Bánh mì ngọt', 'Birt', 'INDIA', 'Male', 'cbirtb@yolasite.com', 833),
+-- ( 'Cà phê', 'Kevane', 'INDIA', 'Male', 'qkevanec@lulu.com', 804),
+-- ( 'Bánh mì ngọt', 'Bisset', 'VN', 'Male', 'sbissetd@aol.com', 1310),
+-- ( 'Nấm Nhật Bản', 'Flello', 'INDIA', 'Female', 'sflelloe@edublogs.org', 1908),
+-- ( 'Nấm Nhật Bản', 'Hamlett', 'INDIA', 'Female', 'mhamlettf@github.com', 541),
+-- ( 'Bánh mì ngọt', 'Billington', 'VN', 'Female', 'nbillingtong@soundcloud.com', 897),
+-- ( 'Cà phê', 'Huison', 'INDIA', 'Male', 'hhuisonh@ihg.com', 444),
+-- ( 'Cà phê', 'Ledbetter', 'VN', 'Male', 'eledbetteri@exblog.jp', 507),
+-- ( 'Cà phê', 'Suddick', 'VN', 'Genderfluid', 'asuddickj@ted.com', 657),
+-- ( 'Sữa chua', 'Guenther', 'US', 'Female', 'kguentherk@sohu.com', 690),
+-- ( 'Cà phê', 'Heck', 'INDIA', 'Male', 'kheckl@epa.gov', 1058),
+-- ( 'Sữa chua', 'Lieb', 'INDIA', 'Female', 'jliebm@huffingtonpost.com', 1318),
+-- ( 'Sữa chua', 'Demead', 'INDIA', 'Female', 'jdemeadn@senate.gov', 1461),
+-- ( 'Sữa chua', 'Scedall', 'VN', 'Male', 'escedallo@samsung.com', 970),
+-- ( 'Tiêu bắc', 'Grastye', 'VN', 'Female', 'mgrastyep@google.nl', 1992),
+-- ( 'Tiêu bắc', 'Vooght', 'VN', 'Male', 'lvooghtq@upenn.edu', 1325),
+-- ( 'Tiêu bắc', 'Threadgall', 'VN', 'Female', 'ethreadgallr@ihg.com', 1700),
+-- ( 'Tiêu bắc', 'Jannasch', 'US', 'Male', 'fjannaschs@sourceforge.net', 1593),
+-- ( 'Cà phê', 'Rayner', 'US', 'Female', 'graynert@forbes.com', 345);
+-- Bai 4
+-- SELECT country, SUM(price) AS "tong"
+-- FROM hoa_don
+-- WHERE country = "US"
+-- GROUP BY country
+-- Bai 5
+
+-- SELECT product_name, MIN(price) AS "Gia thap nhat"
+-- FROM hoa_don
+-- GROUP BY product_name
+
+-- Bai 6
+
+-- SELECT country, MAX(price) AS "Don co gia cao nhat"
+-- FROM  hoa_don
+-- GROUP BY country
+
+-- Bai 7
+-- SELECT gender, SUM(price) AS"tong tien theo gioi tinh"
+-- FROM hoa_don
+-- GROUP BY gender
+
+-- Bai 8
+-- SELECT country, AVG(price) AS "Trung binh"
+-- FROM hoa_don
+-- GROUP BY country
+-- 
+
+-- Bai 9
+-- UPDATE hoa_don
+-- SET price = 1225
+-- WHERE product_name = "Tiêu bắc"
+-- Bai 10
+-- DELETE FROM hoa_don
+-- WHERE Country ="INDIA" AND price BETWEEN 900 AND 1200
+-- 
