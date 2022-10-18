@@ -1,0 +1,220 @@
+-- Bài 1
+-- CREATE TABLE account(
+--  id INT PRIMARY KEY AUTO_INCREMENT,
+--  full_name TEXT,
+--   username TEXT,
+--   phone VARCHAR(10),
+--  email TEXT,
+--  created_date DATE
+-- );
+
+-- CREATE TABLE address(
+--   id INT PRIMARY KEY AUTO_INCREMENT,
+--   address TEXT,
+--   created_date DATE,
+--   FOREIGN KEY(id) REFERENCES account(id)
+-- );
+-- 
+
+-- Bài 2
+-- INSERT INTO account(username,full_name,phone,email,created_date)
+-- VALUES 
+-- ("a","van su","0934564567","abc@mail",'2022-04-13'),
+-- ("b","van tam","093456678","abc@mail",'2022-04-13'),
+-- ("c","van duc","093456765","abc@mail",'2022-04-13'),
+-- ("d","van phu","0934567896","abc@mail",'2022-04-13'),
+-- ("e","van sy","0934563214","abc@mail",'2022-04-13'),
+-- ("f","van dam","0934565432","abc@mail",'2022-04-13'),
+-- ("g","van tuong","0934565432","abc@mail",'2022-04-13'),
+-- ("h","van hau","0934563449","abc@mail",'2022-04-13'),
+-- ("j","van trong","0934563456","abc@mail",'2022-04-13'),
+-- ("k","van hue","093456456","abc@mail",'2022-04-13');
+-- 
+-- INSERT INTO address(address,created_date)
+-- VALUES 
+-- ("Hoang mai",'2022-04-13'),
+-- ("hoa luu",'2022-04-13'),
+-- ("quoc oai",'2022-04-13'),
+-- ("thach that",'2022-04-13'),
+-- ("ba vi",'2022-04-13'),
+-- ("me linh",'2022-04-13'),
+-- ("phu xuyen",'2022-04-13'),
+-- ("ung hoa",'2022-04-13'),
+-- ("thanh tri",'2022-04-13'),
+-- ("soc son",'2022-04-13');
+
+-- Bài 3
+-- SELECT account.username, account.full_name,account.phone, account.email, account.created_date, address.address FROM account
+-- JOIN address ON account.id = address.id
+
+-- Bài 4
+
+-- DROP TABLE address;
+-- DROP TABLE account;
+-- CREATE TABLE account(
+--  id INT PRIMARY KEY AUTO_INCREMENT,
+--  full_name TEXT,
+--   username TEXT,
+--   phone VARCHAR(10),
+--  email TEXT,
+--  created_date DATE
+-- );
+-- 
+-- CREATE TABLE address(
+--   id INT PRIMARY KEY AUTO_INCREMENT,
+--   address TEXT,
+--   created_date DATE,
+--   account_id INT,
+--   FOREIGN KEY(account_id) REFERENCES account(id)
+-- );
+-- Bài 5
+-- INSERT INTO account(username,full_name,phone,email,created_date)
+-- VALUES 
+-- ("a","van su","0934564567","abc@mail",'2022-04-13'),
+-- ("b","van tam","093456678","abc@mail",'2022-04-13'),
+-- ("c","van duc","093456765","abc@mail",'2022-04-13'),
+-- ("d","van phu","0934567896","abc@mail",'2022-04-13'),
+-- ("e","van sy","0934563214","abc@mail",'2022-04-13'),
+-- ("f","van dam","0934565432","abc@mail",'2022-04-13'),
+-- ("g","van tuong","0934565432","abc@mail",'2022-04-13'),
+-- ("h","van hau","0934563449","abc@mail",'2022-04-13'),
+-- ("j","van trong","0934563456","abc@mail",'2022-04-13'),
+-- ("k","van hue","093456456","abc@mail",'2022-04-13');
+-- INSERT INTO address(address,created_date,account_id)
+-- VALUES 
+-- ("Hoang mai",'2022-04-13',1),
+-- ("hoa luu",'2022-04-13',4),
+-- ("quoc oai",'2022-04-13',2),
+-- ("thach that",'2022-04-13',3),
+-- ("ba vi",'2022-04-13',5),
+-- ("me linh",'2022-04-13',2),
+-- ("phu xuyen",'2022-04-13',1),
+-- ("ung hoa",'2022-04-13',3),
+-- ("thanh tri",'2022-04-13',4),
+-- ("soc son",'2022-04-13',6);
+
+-- Bài 6 
+-- SELECT account.id,account.username, account.full_name,account.phone, account.email, account.created_date, address.address 
+-- FROM account
+-- JOIN address ON account.id = address.account_id
+-- Bài 7
+
+ -- DROP TABLE address;
+ -- DROP TABLE account;
+-- CREATE TABLE account(
+--  id INT PRIMARY KEY AUTO_INCREMENT,
+--  full_name TEXT,
+--   username TEXT,
+--   phone VARCHAR(10),
+--   email TEXT,
+--  created_date DATE
+-- );
+-- 
+-- CREATE TABLE address(
+--   id INT PRIMARY KEY AUTO_INCREMENT,
+--   address TEXT,
+--   created_date DATE
+-- );
+-- CREATE TABLE account_address(
+--  account_id INT,
+--  address_id INT,
+--  FOREIGN KEY(account_id) REFERENCES account(id),
+--  FOREIGN KEY (address_id) REFERENCES address(id)
+-- );
+
+-- Bài 8
+
+-- INSERT INTO account(username,full_name,phone,email,created_date)
+-- VALUES 
+-- ("a","van su","0934564567","abc@mail",'2022-04-13'),
+-- ("b","van tam","093456678","abc@mail",'2022-04-13'),
+-- ("c","van duc","093456765","abc@mail",'2022-04-13'),
+-- ("d","van phu","0934567896","abc@mail",'2022-04-13'),
+-- ("e","van sy","0934563214","abc@mail",'2022-04-13'),
+-- ("f","van dam","0934565432","abc@mail",'2022-04-13'),
+-- ("g","van tuong","0934565432","abc@mail",'2022-04-13'),
+-- ("h","van hau","0934563449","abc@mail",'2022-04-13'),
+-- ("j","van trong","0934563456","abc@mail",'2022-04-13'),
+-- ("k","van hue","093456456","abc@mail",'2022-04-13');
+-- 
+-- INSERT INTO address(address,created_date)
+-- VALUES 
+-- ("Hoang mai",'2022-04-13'),
+-- ("hoa luu",'2022-04-13'),
+-- ("quoc oai",'2022-04-13'),
+-- ("thach that",'2022-04-13'),
+-- ("ba vi",'2022-04-13'),
+-- ("me linh",'2022-04-13'),
+-- ("phu xuyen",'2022-04-13'),
+-- ("ung hoa",'2022-04-13'),
+-- ("thanh tri",'2022-04-13'),
+-- ("soc son",'2022-04-13');
+-- 
+-- INSERT INTO account_address(account_id,address_id)
+-- VALUES 
+-- (1,2),
+-- (2,1),
+-- (3,2),
+-- (5,6),
+-- (9,2),
+-- (8,4),
+-- (6,5),
+-- (8,6),
+-- (6,8),
+-- (8,8);
+-- 
+-- Bài 9
+-- SELECT * FROM account JOIN account_address 
+-- ON account.id = account_address.account_id
+-- JOIN address
+-- ON account_address.address_id = address.id
+-- Bài 10
+-- DROP TABLE account_address;
+-- DROP TABLE account;
+-- DROP TABLE address;
+
+-- CREATE TABLE account(
+--  id INT PRIMARY KEY AUTO_INCREMENT,
+--  full_name TEXT,
+--   username TEXT,
+--   phone VARCHAR(10),
+--  email TEXT,
+--  created_date DATE
+-- );
+-- 
+-- CREATE TABLE address(
+--   id INT PRIMARY KEY AUTO_INCREMENT,
+--   address TEXT,
+--   created_date DATE,
+--   FOREIGN KEY(id) REFERENCES account(id) ON DELETE CASCADE ON UPDATE CASCADE 
+-- );
+-- INSERT INTO account(username,full_name,phone,email,created_date)
+-- VALUES 
+-- ("a","van su","0934564567","abc@mail",'2022-04-13'),
+-- ("b","van tam","093456678","abc@mail",'2022-04-13'),
+-- ("c","van duc","093456765","abc@mail",'2022-04-13'),
+-- ("d","van phu","0934567896","abc@mail",'2022-04-13'),
+-- ("e","van sy","0934563214","abc@mail",'2022-04-13'),
+-- ("f","van dam","0934565432","abc@mail",'2022-04-13'),
+-- ("g","van tuong","0934565432","abc@mail",'2022-04-13'),
+-- ("h","van hau","0934563449","abc@mail",'2022-04-13'),
+-- ("j","van trong","0934563456","abc@mail",'2022-04-13'),
+-- ("k","van hue","093456456","abc@mail",'2022-04-13');
+-- 
+-- INSERT INTO address(address,created_date)
+-- VALUES 
+-- ("Hoang mai",'2022-04-13'),
+-- ("hoa luu",'2022-04-13'),
+-- ("quoc oai",'2022-04-13'),
+-- ("thach that",'2022-04-13'),
+-- ("ba vi",'2022-04-13'),
+-- ("me linh",'2022-04-13'),
+-- ("phu xuyen",'2022-04-13'),
+-- ("ung hoa",'2022-04-13'),
+-- ("thanh tri",'2022-04-13'),
+-- ("soc son",'2022-04-13');
+
+-- Bài 11
+
+-- DELETE FROM account
+-- WHERE username = 'a'
