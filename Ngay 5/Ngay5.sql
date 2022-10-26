@@ -110,22 +110,23 @@
 
 
 -- SELECT giang_vien.ma_giang_vien,giang_vien.ho_ten,khoa.ten_khoa
--- FROM khoa JOIN  giang_vien ON khoa.ma_khoa = giang_vien.ma_khoa
+-- FROM khoa JOIN giang_vien ON khoa.ma_khoa = giang_vien.ma_khoa
 -- WHERE ma_giang_vien IN
 -- (
 -- SELECT ma_giang_vien FROM thong_tin_huong_dan
 -- GROUP BY
--- ma_giang_vien HAVING COUNT(ma_giang_vien) >=3
+-- ma_giang_vien 
+-- HAVING COUNT(ma_giang_vien) >=3
 -- );
 
 -- Bai 14
-SELECT *
-FROM sinh_vien
-WHERE 
-ma_sv IN
-(
-SELECT ma_sv FROM thong_tin_huong_dan
- WHERE ket_qua IS NULL	
-);
-
+-- SELECT *
+-- FROM sinh_vien
+-- WHERE 
+-- ma_sv IN
+-- (
+-- SELECT ma_sv FROM thong_tin_huong_dan
+--  WHERE ket_qua IS NULL	
+-- );
+-- 
 
